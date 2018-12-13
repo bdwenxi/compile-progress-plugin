@@ -5,8 +5,16 @@
 
 import {Compiler, Plugin} from 'webpack';
 
-export default class CompileProgressPlugin implements Plugin {
+class CompileProgressPlugin implements Plugin {
     apply(compiler: Compiler) {
-        console.log(compiler.hooks);
+        compiler.hooks.emit.tap(
+            'CompileProgressPlugin',
+            compilation => {
+                console.log(compilation);
+            }
+        );
     }
 }
+
+export default CompileProgressPlugin;
+module.exports = CompileProgressPlugin;

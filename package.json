@@ -1,23 +1,30 @@
 {
-  "name": "compile-progress-plugin",
-  "version": "1.0.0",
-  "description": "A webpack plugin which provides a way to show the progress during a compilation.",
-  "main": "dist/index.js",
-  "repository": "git@github.com:simmons8616/compile-progress-plugin.git",
-  "author": "simmons8616 <simmons0616@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/node": "^10.12.12",
-    "@types/progress": "^2.0.1",
-    "@types/webpack": "^4.4.21",
-    "jest": "^23.6.0",
-    "standard-version": "^4.4.0",
-    "typescript": "^3.2.2",
-    "webpack": "^4.27.1"
-  },
-  "dependencies": {
-    "chalk": "^2.4.1",
-    "progress": "^2.0.3",
-    "tslib": "^1.9.3"
-  }
+    "name": "compile-progress-plugin",
+    "version": "1.0.0",
+    "description": "A webpack plugin which provides a way to show the progress during a compilation.",
+    "main": "dist/index.js",
+    "repository": "git@github.com:simmons8616/compile-progress-plugin.git",
+    "author": "simmons8616 <simmons0616@gmail.com>",
+    "license": "MIT",
+    "bugs": "https://github.com/simmons8616/compile-progress-plugin/issues",
+    "scripts": {
+        "test": "jest"
+    },
+    "devDependencies": {
+        "@types/node": "^10.12.12",
+        "@types/progress": "^2.0.1",
+        "@types/webpack": "^4.4.21",
+        "jest": "^23.6.0",
+        "standard-version": "^4.4.0",
+        "typescript": "^3.2.2",
+        "webpack": "^4.27.1"
+    },
+    "dependencies": {
+        "chalk": "^2.4.1",
+        "progress": "^2.0.3",
+        "tslib": "^1.9.3"
+    },
+    "engines": {
+        "node": ">= 6.9.0 <7.0.0 || >= 8.9.0"
+    }
 }

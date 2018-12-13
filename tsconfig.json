@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "esnext",
+        "module": "es2015",
         "lib": ["es5", "es6", "es2015", "es2017", "esnext"],
         "declaration": true,
         "removeComments": true,
@@ -26,7 +26,6 @@
         /* Module Resolution Options */
         "outDir": "./dist",
         "moduleResolution": "node",
-        "typeRoots": ["./node_modules/@types"],
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "experimentalDecorators": true,
