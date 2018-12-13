@@ -24,6 +24,7 @@
         "noFallthroughCasesInSwitch": true,
 
         /* Module Resolution Options */
+        "outDir": "./dist",
         "moduleResolution": "node",
         "typeRoots": ["./node_modules/@types"],
         "allowSyntheticDefaultImports": true,
