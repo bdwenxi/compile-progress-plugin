@@ -4,9 +4,13 @@
  */
 
 import path from 'path';
+import {exec} from 'child_process';
+import {promisify} from 'util';
 
 import webpack from 'webpack';
 import glob from 'glob';
+
+const execCommand = promisify(exec);
 
 function pathResolve(...subPaths) {
     return path.resolve(__dirname, ...subPaths);
@@ -31,7 +35,7 @@ function globDirectories(cwd) {
     );
 }
 
-function runComiler(compiler) {
+function runCompiler(compiler) {
     return new Promise(
         (resolve, reject) => {
             compiler.run(
@@ -51,6 +55,8 @@ function runComiler(compiler) {
 test('TestCases', async done => {
     const casesDirectories = pathResolve('cases');
     let directories;
+
+    await execCommand('tsc');
 
     try {
         directories = await globDirectories(casesDirectories);
@@ -77,7 +83,7 @@ test('TestCases', async done => {
             let stats;
 
             try {
-                stats = await runComiler(webpack(webpackConf));
+                stats = await runCompiler(webpack(webpackConf));
             }
             catch (e) {
                 done(e);
